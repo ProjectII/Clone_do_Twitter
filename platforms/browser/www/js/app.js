@@ -22,11 +22,21 @@ function hideLoader() {
 }
 
 $('#formmensagem').on('submit', function () {
-    // var mensagem = $('#mensagem').val();
+    var mensagem = montarMensagem();
     // alert('a mensagem é' + mensagem);
-    console.log(montarMensagem());
+    //console.log(montarMensagem());
+    enviarMensagem(mensagem);
     return false;
 });
+
+function enviarMensagem(mensagem) {
+    $.ajax({
+        url:'http://service-api.herokuapp.com/mensagens',
+        type: 'post',
+        contentType: 'application/json',
+        data: JSON.stringify(mensagem)
+    });
+}
 
 function montarMensagem() {
     return {
