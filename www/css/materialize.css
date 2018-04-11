@@ -4007,6 +4007,9 @@ input[type=range] + .thumb {
   }
 }
 
+#nav-wrapper{
+  background-color: red;
+}
 nav {
   color: #fff;
   background-color: #ee6e73;
