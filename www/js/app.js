@@ -1,17 +1,16 @@
 //Inicializa todos os componentes do template.
 $('#formmensagem').on('submit', function () {
     showLoader()
-    var sucesso = function (data) {
-        hideLoader()
-       Materialize.toast("Mensagem Sucesso", 1500)
-        // window.location = '/index.html?'+ params.toString(); 
-    };
-    var falha = function (data) {
-        hideLoader()
-        Materialize.toast("Sinto muito... erro ao enviar mensagem.", 1500);
-    };
-    enviarMensagem(montarMensagem(), sucesso, falha);
-    return false;
+  var sucesso = function(){
+       var params = new URLSearchParams("toast=Mensagem enviada com sucesso!");
+       window.location = '/index.html?'+ params.toString();
+  };
+  var falha = function(){
+      Materialize.toast("Sinto muito... erro ao enviar mensagem.", 1500);
+      hideLoader()
+  };
+  enviarMensagem(montarMensagem(), sucesso, falha);
+  return false;
 });
 
 
@@ -19,12 +18,16 @@ $(function () {
     $(".dropdown-button").dropdown();
     $(".button-collapse").sideNav();
     $('ul.tabs').tabs();
-
+       
     $('#loading').modal({
-        dismissible: false
+      dismissible: false
     });
-
-    Materialize.updateTextFields();
+     Materialize.updateTextFields();
+     const url = new URL(location);
+     const params = new URLSearchParams(url.search);
+     if (params.has("toast")) {
+        Materialize.toast(params.get("toast"), 1500);
+     } 
 });
 
 
