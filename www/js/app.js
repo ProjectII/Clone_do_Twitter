@@ -3,12 +3,12 @@ $('#formmensagem').on('submit', function () {
     showLoader()
     var sucesso = function (data) {
         hideLoader()
-        console.log("deu certo!", data);
-        // window.location = '/index.html?';
+       Materialize.toast("Mensagem Sucesso", 1500)
+        // window.location = '/index.html?'+ params.toString(); 
     };
     var falha = function (data) {
         hideLoader()
-        console.log("deu errado!", data);
+        Materialize.toast("Sinto muito... erro ao enviar mensagem.", 1500);
     };
     enviarMensagem(montarMensagem(), sucesso, falha);
     return false;
