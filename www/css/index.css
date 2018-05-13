@@ -48,3 +48,9 @@
 .config h5 {
     font-size: 1.2em
 }
+.tweet-container{
+    padding-top: 50px !important
+}
+.navbar-fixed{
+    z-index: 9999;
+}
