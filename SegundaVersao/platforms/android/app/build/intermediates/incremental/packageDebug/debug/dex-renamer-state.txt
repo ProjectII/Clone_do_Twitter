@@ -1,0 +1,4 @@
+#Fri Jun 22 09:05:57 BRT 2018
+base.0=/home/lucasft/Documents/CESJF/Cordova/Weego/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0
+renamed.0=classes.dex
+file.0=/home/lucasft/Documents/CESJF/Cordova/Weego/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0/classes.dex

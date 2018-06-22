@@ -1,0 +1,58 @@
+.brand-logo img {
+    height: 40px;
+}
+
+
+.location {
+    font-size: 0.8em;
+}
+
+.location i {
+    font-size: 1.3em;
+}
+
+.location-big {
+    font-size: 1em;
+}
+
+.location-big i {
+    font-size: 1.6em;
+}
+
+
+/* Index */
+.tweets-container {  
+    padding-top: 50px !important
+}
+
+.navbar-fixed { 
+    z-index: 9999; 
+}
+
+.tweet {
+    margin-bottom: 0px;
+}
+
+.mensagem {
+    margin-top: 10px;
+    margin-bottom: -15px;
+    padding: 5px;
+}
+
+.data-mensagem {
+    text-align: right;
+    font-size: 00.8em;
+}
+
+.tweet-header {
+    margin-bottom: 0px;
+}
+
+.user-login {
+    font-size: 0.8em;
+}
+
+/* Configuração*/
+.config h5 {
+    font-size: 1.2em
+}

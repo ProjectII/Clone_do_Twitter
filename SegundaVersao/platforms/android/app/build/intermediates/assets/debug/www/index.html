@@ -1,0 +1,136 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="lib/materialize/dist/css/materialize.min.css"  media="screen,projection"/>
+      <link href="css/index.css" rel="stylesheet">
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <meta charset="UTF-8">
+    </head>
+
+    <body>
+
+    </div>
+    <div class="navbar-fixed">
+  <nav class="nav-extended light-blue darken-3">
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo"><img src="img/logo-white.png">WeeGo</a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li><a href="settings.html"><i class="large material-icons">settings</i></a> </li>
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+          <li><a href="settings.html"><i class="large material-icons">settings</i>Preferências</a> </li>
+        </ul>
+
+        <ul class="tabs tabs-transparent">
+          <li class="tab"><a href="#todas" class="aba active" ><i class="material-icons">home</i></a></li>
+          <li class="tab"><a href="#recebidas"  class="aba" ><i class="material-icons">message</i></a></li>
+          <li class="tab"><a href="#enviadas"  class="aba" ><i class="material-icons">chat_bubble_outline</i></a></li>
+          <li class="tab"><a href="#favoritas"  class="aba" ><i class="material-icons">star_rate</i></a></li>
+        </ul>
+      </div>
+    </nav>
+    </div>
+  <div id="todas" class="col s12">
+     <div class="container">
+     <div class="row">  
+        <div class="col s12 m8 offset-m2 l6 offset-l3 tweets-container">
+          
+        </div>
+      </div>
+    </div>    
+  </div>
+  <div id="recebidas" class="col s12">
+   <div class="container">
+     <div class="row">  
+        <div class="col s12 m8 offset-m2 l6 offset-l3 tweets-container">
+        </div>
+      </div>
+    </div>  
+  </div>
+  <div id="enviadas" class="col s12">
+     <div class="container">
+     <div class="row">  
+        <div class="col s12 m8 offset-m2 l6 offset-l3 tweets-container">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="favoritas" class="col s12">
+     <div class="container">
+     <div class="row">  
+        <div class="col s12 m8 offset-m2 l6 offset-l3 tweets-container">
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="fixed-action-btn">
+        <a href="newmessage.html" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">send</i></a>
+    </div>
+
+    <div id="loading"  class="modal">
+      <div class="modal-content">
+        <div class="row">
+          <div class="col s12 center-align">
+            <div class="preloader-wrapper big active ">
+              <div class="spinner-layer spinner-blue-only">
+                <div class="circle-clipper left">
+                  <div class="circle"></div>
+                </div><div class="gap-patch">
+                  <div class="circle"></div>
+                </div><div class="circle-clipper right">
+                  <div class="circle"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+     </div>        
+
+    <script id="mensagem_template" type="template">
+      <div class="card-panel grey lighten-5 z-depth-1  mensagem" >
+        <div class="row tweet">
+              <div class="col s2">
+                <img id="avatar{{indice}}" src="img/cordova.png" alt="" class="responsive-img">
+              </div>
+              <div class="col s10">
+                <div class="tweet-header"> 
+                    <span class="black-text">{{nome}}</span>          
+                    <span class="gray-text user-login">@{{login}}</span>          
+                    <span class="black-text right data-mensagem">{{data}}</span>
+                </div> 
+                <p class="black-text flow-text">{{mensagem}}</p>
+                <div>
+                  <span class="black-text location">
+                        <i class="material-icons">location_on</i> {{local}}
+                  </span>
+                  <span class="right">
+                    <a class="waves-effect waves-teal btn-flat"><i class="material-icons">reply</i></a>
+                    <a class="waves-effect waves-teal btn-flat"><i class="material-icons">repeat</i></a>
+                    <a ref="{{indice}}" class="likebutton waves-effect waves-teal btn-flat"><i class="material-icons">star</i></a>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+    </script>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="lib/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/materialize/dist/js/materialize.min.js"></script>
+    <!-- Scripts gerais da aplicação -->
+    <script type="text/javascript" src="js/app.js"></script>
+    <!-- Modelo -->
+    <script type="text/javascript" src="js/messages.js"></script>
+    <script type="text/javascript" src="js/user.js"></script>
+    <!-- Controller desta página -->
+    <script type="text/javascript" src="js/index.js"></script>
+  </body>
+</html>
