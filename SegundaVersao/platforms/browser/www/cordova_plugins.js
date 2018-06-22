@@ -202,6 +202,22 @@ module.exports = [
         "clobbers": [
             "window.FileTransfer"
         ]
+    },
+    {
+        "file": "plugins/cordova-plugin-app-preferences/www/apppreferences.js",
+        "id": "cordova-plugin-app-preferences.apppreferences",
+        "pluginId": "cordova-plugin-app-preferences",
+        "clobbers": [
+            "plugins.appPreferences"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-app-preferences/src/browser/platform.js",
+        "id": "cordova-plugin-app-preferences.platform",
+        "pluginId": "cordova-plugin-app-preferences",
+        "merges": [
+            ""
+        ]
     }
 ];
 module.exports.metadata = 
@@ -210,7 +226,8 @@ module.exports.metadata =
     "cordova-plugin-whitelist": "1.3.3",
     "cordova-plugin-file": "6.0.1",
     "cordova-plugin-file-transfer": "1.7.1",
-    "cordova-plugin-geolocation": "4.0.1"
+    "cordova-plugin-geolocation": "4.0.1",
+    "cordova-plugin-app-preferences": "0.99.3"
 }
 // BOTTOM OF METADATA
 });

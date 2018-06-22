@@ -66,7 +66,7 @@ function openDB(callback){
     }
 }
 
-
+/*
 
 document.addEventListener('deviceready', function() {
    db = window.sqlitePlugin.openDatabase({name: 'demo.db', location: 'default'});
@@ -86,6 +86,7 @@ document.addEventListener('deviceready', function() {
     console.log('Banco de dados pronto.');
   });
 });
+*/
 
 function getLocalizacao(sucesso, falha){
     navigator.geolocation.getCurrentPosition(sucesso, falha);

@@ -8,6 +8,12 @@ const containers = {
 
 function montaTemplate(mensagem) {
     var template = $("#mensagem_template").html();
+    console.log(mensagem);
+
+    if (!mensagem.autor){
+        mensagem.autor = {'nome':'Desconhecido', 'login':'desconhecido'}
+    }
+
     return template.replace('{{mensagem}}', mensagem.mensagem)
         .replace('{{nome}}', mensagem.autor.nome)
         .replace('{{login}}', mensagem.autor.login)
@@ -18,7 +24,7 @@ function montaTemplate(mensagem) {
 
 
 function adicionaMensagem(container, mensagem) {
-    $(container + '.tweets-container').append(montaTemplate(mensagem));
+    $(container + ' .tweets-container').append(montaTemplate(mensagem));
     getAvatar(mensagem.autor.login, function (avatar) {
         $('#avatar' + mensagem.indice).attr('src', avatar);
     });
@@ -28,7 +34,7 @@ function exibirMensagens(container, onComplete) {
     $('#loading').modal("open");
 
     var sucesso = function (data) {
-        $(container + '.tweets-container').html('');
+        $(container + ' .tweets-container').html('');
         $.each(data, function (i, mensagem) {
             mensagem.indice = i;
             adicionaMensagem(container, mensagem);

@@ -27,9 +27,10 @@ $(function () {
         var mensagem = $('#mensagem').val();
         var local = { lat: $('#lat').val(), lon: $('#lon').val() };
 
-        getUser(function (usuario) {
+        //getUser(function (usuario) {
+            usuario = {'nome':'Lucas', 'login':'lucas'};
             enviarMensagem(montarMensagem(mensagem, usuario, local), sucesso, falha);
-        }, falha);
+      //  }, falha);
         return false;
     });
 
